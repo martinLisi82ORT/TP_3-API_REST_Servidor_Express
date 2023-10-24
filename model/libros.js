@@ -29,10 +29,10 @@ class Model {
         libro.id = id
         const indice = this.libros.findIndex(libro => libro.id === id)
         if (indice != -1) {
-            const ant = this.libros[indice]
-            const nuevo = { ...ant, ...libro }
-            this.libros.splice(indice, 1, nuevo)
-            return nuevo
+            const libroAnt = this.libros[indice]
+            const libroNuevo = { ...libroAnt, ...libro }
+            this.libros.splice(indice, 1, libroNuevo)
+            return libroNuevo
         }
         else {
             this.libros.push(libro)
